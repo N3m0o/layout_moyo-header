@@ -1,3 +1,7 @@
+:root {
+  --color: #00acdc;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +9,7 @@
 }
 
 body {
+  margin: 0;
   font-family: Roboto, sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -14,78 +19,56 @@ body {
 
 .header {
   display: flex;
-  width: 100%;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 50px;
 }
 
-.nav_item {
-  font-family: Roboto, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  text-transform: uppercase;
-  margin-right: 20px;
-}
-
-.nav_item:last-child {
-  margin-right: 0;
-}
-
-.nav_item:first-child {
-  margin-left: 0;
-}
-
-.nav_list {
-  list-style: none;
-  display: flex;
-}
-
-.nav_item a {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  padding-top: 22.5px;
-  padding-bottom: 22.5px;
-  text-decoration: none;
-  color: #000;
-  position: relative;
-}
-
-.nav_item a:hover {
-  color: #00acdc;
-}
-
-.nav_item a.is-active {
-  position: relative;
-  padding-bottom: 22.5px;
-  color: #00acdc;
-}
-
-.nav_item a.is-active::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 4px;
-  background-color: #00acdc;
-  border-radius: 8px;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  padding: 10px 0;
-  margin-left: 50px;
-  margin-right: 419px;
-}
-
-.logo img {
+.logo_img {
   height: 40px;
   width: 40px;
 }
 
-@media (max-width: 1024px) {
-  .logo {
-    margin-right: 243px;
-  }
+.navigation_list {
+  display: flex;
+  list-style-type: none;
+}
+
+.navigation_item {
+  margin-left: 20px;
+}
+
+.navigation_item:first-child {
+  margin-left: 0;
+}
+
+.navigation_link {
+  display: flex;
+  color: #000;
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.navigation_link:hover {
+  color: var(--color);
+}
+
+.is-active {
+  color: var(--color);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--color);
+  border-radius: 8px;
 }

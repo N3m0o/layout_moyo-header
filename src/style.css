@@ -4,16 +4,6 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: Roboto;
-  src: url('/src/fonts/static/Roboto_Condensed-MediumItalic.ttf')
-    format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0000-00FF;
-}
-
 body {
   font-family: Roboto, sans-serif;
   font-optical-sizing: auto;
